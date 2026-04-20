@@ -1,0 +1,36 @@
+template:
+  - sensor:
+      - name: "BYD Battery 5 Increment"
+        state: "{{ (states('sensor.byd_sealion_7_battery_level') | float(0) / 5) | int * 5 }}"
+      - name: "BYD Front Left Tire Pressure Display"
+        state: "{{ states('sensor.byd_sealion_7_front_left_tire_pressure') | float(0) | round(1) }}"
+      - name: "BYD Front Right Tire Pressure Display"
+        state: "{{ states('sensor.byd_sealion_7_front_right_tire_pressure') | float(0) | round(1) }}"
+      - name: "BYD Rear Left Tire Pressure Display"
+        state: "{{ states('sensor.byd_sealion_7_rear_left_tire_pressure') | float(0) | round(1) }}"
+      - name: "BYD Rear Right Tire Pressure Display"
+        state: "{{ states('sensor.byd_sealion_7_rear_right_tire_pressure') | float(0) | round(1) }}"
+
+input_boolean:
+  body_above_wheelbase:
+    name: Body on Top
+  show_tyres:
+    name: Show Tyres
+  byd_config:
+    name: BYD Config
+  byd_driver_seat_cooling:
+    name: Driver Seat Cooling
+  byd_driver_seat_heating:
+    name: Driver Seat Heating
+  byd_passenger_seat_cooling:
+    name: Passenger Seat Cooling
+  byd_passenger_seat_heating:
+    name: Passenger Seat Heating
+
+input_select:
+  battery_display_option:
+    name: Battery Display Option
+    options:
+      - Battery Type 1
+      - Battery Type 2
+    initial: Battery Type 1
