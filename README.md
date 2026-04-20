@@ -45,7 +45,7 @@ All 55 image and GIF files must be present for the dashboard overlays to display
 
 ---
 
-### Step 2 — Add Configuration to `configuration.yaml`
+### Step 2 — Add `configuration_helpers.yaml` to `configuration.yaml`
 
 Add the following to your `configuration.yaml` file.
 
@@ -177,7 +177,7 @@ byd-sealion7-ha-dashboard/
 ├── README.md
 ├── car.yaml              # Dashboard YAML
 ├── automations.yaml      # All automations
-├── configuration.yaml    # Template sensors, input booleans, input select
+├── configuration_helpers.yaml    # Template sensors, input booleans, input select
 └── images/               # All 55 PNG and GIF overlay files
 ```
 ---
