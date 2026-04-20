@@ -110,10 +110,6 @@ These trigger polling when a phone connects/disconnects from Android Auto. They 
 2. Substitute your own phone's binary sensor for `binary_sensor.pixel_9_pro_fold_android_auto`
 3. Optionally remove these automations entirely if you don't use Android Auto
 
-**Page Load Poll**
-
-Uses a webhook to trigger a force poll when the car dashboard page loads (requires Browser Mod). The webhook ID in the file is unique to the original installation — after importing, open the automation, regenerate the webhook ID, and update your Browser Mod configuration to match.
-
 #### Automations that work as-is
 
 These require no changes beyond ensuring your entity names match:
