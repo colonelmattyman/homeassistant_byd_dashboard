@@ -1,0 +1,2015 @@
+type: sections
+max_columns: 3
+icon: mdi:car
+path: car
+title: Car
+sections:
+  - type: grid
+    cards:
+      - type: picture-elements
+        elements:
+          - type: image
+            style:
+              left: 50%
+              top: 50%
+              width: 100%
+            image:
+              media_content_id: media-source://media_source/local/BYD/base.png
+              media_content_type: image/png
+              metadata:
+                title: base.png
+                thumbnail: null
+                media_class: image
+                children_media_class: null
+                navigateIds:
+                  - {}
+                  - media_content_type: app
+                    media_content_id: media-source://media_source
+                  - media_content_type: ""
+                    media_content_id: media-source://media_source/local/BYD
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_boolean.body_above_wheelbase
+                state: "on"
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/body.png
+                  media_content_type: image/png
+                  metadata:
+                    title: body.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Top body
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_boolean.show_tyres
+                state: "on"
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/blackwheels.png
+                  media_content_type: image/png
+                  metadata:
+                    title: blackwheels.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Show Tyres
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_front_left_tire_pressure
+                below: 38
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/frontleftterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: frontleftterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Front Left Low
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_front_right_tire_pressure
+                below: 38
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/frontrighterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: frontrighterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Front Right Low
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_rear_left_tire_pressure
+                below: 38
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/rearlefterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: rearlefterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Rear Left Low
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_rear_right_tire_pressure
+                below: 38
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/rearrighterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: rearrighterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Rear Right Low
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_front_left_tire_pressure
+                above: 44
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/frontleftterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: frontleftterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Front Left High
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_front_right_tire_pressure
+                above: 44
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/frontrighterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: frontrighterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Front Right High
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_rear_left_tire_pressure
+                above: 44
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/rearlefterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: rearlefterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Rear Left High
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_sealion_7_rear_right_tire_pressure
+                above: 44
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/rearrighterror.png
+                  media_content_type: image/png
+                  metadata:
+                    title: rearrighterror.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Rear Right High
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 99
+                below: 101
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery100.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery100.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 100%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 94
+                below: 96
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery095.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery95.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 95%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 89
+                below: 91
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery090.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery90.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 90%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 84
+                below: 86
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery085.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery85.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 85%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 79
+                below: 81
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery080.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery80.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 80%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 74
+                below: 76
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery075.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery75.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 75%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 69
+                below: 71
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery070.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery70.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 70%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 64
+                below: 66
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery065.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery65.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 65%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 59
+                below: 61
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery060.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery60.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 60%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 54
+                below: 56
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery055.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery55.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 55%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 49
+                below: 51
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery050.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery50.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 50%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 44
+                below: 46
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery045.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery45.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 45%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 39
+                below: 41
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery040.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery40.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 40%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 34
+                below: 36
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery035.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery35.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 35%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 29
+                below: 31
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery030.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery30.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 30%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 24
+                below: 26
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery025.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery25.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 25%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 19
+                below: 21
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery020.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery20.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 20%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 14
+                below: 16
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery015.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery15.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 15%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 9
+                below: 11
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery010.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery10.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 10%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 4
+                below: 6
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery005.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery5.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 5%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: -1
+                below: 1
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/2battery000.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery0.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 0%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 99
+                below: 101
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 15%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery100.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery100.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 100%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 94
+                below: 96
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery95.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery95.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 95%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 89
+                below: 91
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery90.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery90.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 90%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 84
+                below: 86
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery85.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery85.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 85%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 79
+                below: 81
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery80.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery80.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 80%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 74
+                below: 76
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery75.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery75.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 75%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 69
+                below: 71
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery70.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery70.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 70%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 64
+                below: 66
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery65.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery65.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 65%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 59
+                below: 61
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery60.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery60.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 60%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 54
+                below: 56
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery55.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery55.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 55%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 49
+                below: 51
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery50.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery50.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 50%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 44
+                below: 46
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery45.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery45.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 45%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 39
+                below: 41
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery40.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery40.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 40%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 34
+                below: 36
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery35.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery35.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 35%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 29
+                below: 31
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery30.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery30.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 30%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 24
+                below: 26
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery25.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery25.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 25%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 19
+                below: 21
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery20.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery20.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 20%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 14
+                below: 16
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery15.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery15.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 15%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 9
+                below: 11
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery10.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery10.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 10%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: 4
+                below: 6
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery5.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery5.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 5%
+          - type: conditional
+            conditions:
+              - condition: numeric_state
+                entity: sensor.byd_battery_5_increment
+                above: -1
+                below: 1
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/battery0.png
+                  media_content_type: image/png
+                  metadata:
+                    title: battery0.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: 0%
+          - type: state-label
+            style:
+              left: 12%
+              top: 17%
+              font-size: 150%
+            entity: sensor.byd_front_left_tire_pressure_display
+          - type: state-label
+            style:
+              left: 12%
+              top: 19%
+            entity: sensor.byd_sealion_7_front_left_tire_pressure
+            attribute: unit_of_measurement
+          - type: state-label
+            style:
+              left: 88%
+              top: 17%
+              font-size: 150%
+            entity: sensor.byd_front_right_tire_pressure_display
+          - type: state-label
+            style:
+              left: 88%
+              top: 19%
+            entity: sensor.byd_sealion_7_front_right_tire_pressure
+            attribute: unit_of_measurement
+          - type: state-label
+            style:
+              left: 88%
+              top: 78%
+              font-size: 150%
+            entity: sensor.byd_rear_right_tire_pressure_display
+          - type: state-label
+            style:
+              left: 88%
+              top: 80%
+            entity: sensor.byd_sealion_7_rear_right_tire_pressure
+            attribute: unit_of_measurement
+          - type: state-label
+            style:
+              left: 12%
+              top: 78%
+              font-size: 150%
+            entity: sensor.byd_rear_left_tire_pressure_display
+          - type: state-label
+            style:
+              left: 12%
+              top: 80%
+            entity: sensor.byd_sealion_7_rear_left_tire_pressure
+            attribute: unit_of_measurement
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: binary_sensor.byd_sealion_7_locked
+                state: "on"
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/doorlocks.png
+                  media_content_type: image/png
+                  metadata:
+                    title: doorlocks.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Doors Locked
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: binary_sensor.byd_sealion_7_windows
+                state: "on"
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 50%
+                  width: 100%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/windowsopen.png
+                  media_content_type: image/png
+                  metadata:
+                    title: windowsopen.png
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+            title: Windows Open
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 61.5%
+                  font-size: 300%
+                entity: sensor.byd_sealion_7_battery_level
+            title: Battery Type 1 Battery Level
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 63.5%
+                  font-size: 300%
+                entity: sensor.byd_sealion_7_battery_level
+            title: Battery Type 2 Battery Level
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 67%
+                entity: binary_sensor.byd_sealion_7_charging
+            title: Battery Type 1 Charging
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 69%
+                entity: binary_sensor.byd_sealion_7_charging
+            title: Battery Type 2 Charging
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 1
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 65%
+                entity: sensor.byd_sealion_7_range
+            title: Battery Type 1 Range
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.battery_display_option
+                state: Battery Type 2
+            elements:
+              - type: state-label
+                style:
+                  left: 50%
+                  top: 67%
+                entity: sensor.byd_sealion_7_range
+            title: Battery Type 2 Range
+          - type: image
+            style:
+              left: 50%
+              top: 55%
+              width: 6%
+            image:
+              media_content_id: media-source://media_source/local/BYD/charging_bolt_off.gif
+              media_content_type: image/gif
+              metadata:
+                title: charging_bolt_off.gif
+                thumbnail: null
+                media_class: image
+                children_media_class: null
+                navigateIds:
+                  - {}
+                  - media_content_type: app
+                    media_content_id: media-source://media_source
+                  - media_content_type: ""
+                    media_content_id: media-source://media_source/local/BYD
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: binary_sensor.byd_sealion_7_charging
+                state: "on"
+            elements:
+              - type: image
+                style:
+                  left: 50%
+                  top: 55%
+                  width: 6%
+                image:
+                  media_content_id: media-source://media_source/local/BYD/charging_bolt_v3.2.gif
+                  media_content_type: image/gif
+                  metadata:
+                    title: charging_bolt_v3.2.gif
+                    thumbnail: null
+                    media_class: image
+                    children_media_class: null
+                    navigateIds:
+                      - {}
+                      - media_content_type: app
+                        media_content_id: media-source://media_source
+                      - media_content_type: ""
+                        media_content_id: media-source://media_source/local/BYD
+        image:
+          media_content_id: media-source://media_source/local/BYD/body.png
+          media_content_type: image/png
+          metadata:
+            title: body.png
+            thumbnail: null
+            media_class: image
+            children_media_class: null
+            navigateIds:
+              - {}
+              - media_content_type: app
+                media_content_id: media-source://media_source
+              - media_content_type: ""
+                media_content_id: media-source://media_source/local/BYD
+        grid_options:
+          columns: 12
+          rows: auto
+      - type: entities
+        entities:
+          - entity: input_boolean.body_above_wheelbase
+            name: Body on top
+          - entity: input_boolean.show_tyres
+          - entity: input_select.battery_display_option
+          - entity: switch.byd_sealion_7_disable_polling
+        visibility:
+          - condition: state
+            entity: input_boolean.byd_config
+            state: "on"
+      - type: logbook
+        target:
+          entity_id:
+            - button.byd_sealion_7_force_poll
+        grid_options:
+          columns: 12
+          rows: 6
+        visibility:
+          - condition: state
+            entity: input_boolean.byd_config
+            state: "on"
+        title: Polling
+    column_span: 1
+  - type: grid
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: input_boolean.byd_driver_seat_cooling
+                name: Cooling
+              - entity: input_boolean.byd_driver_seat_heating
+                name: Heating
+            title: Driver Automation
+        grid_options:
+          columns: 12
+          rows: auto
+        visibility:
+          - condition: state
+            entity: input_boolean.byd_config
+            state: "on"
+      - type: vertical-stack
+        cards:
+          - type: entities
+            entities:
+              - entity: input_boolean.byd_passenger_seat_cooling
+                name: Cooling
+              - entity: input_boolean.byd_passenger_seat_heating
+                name: Heating
+            title: Passenger Automation
+        grid_options:
+          columns: 12
+          rows: auto
+        visibility:
+          - condition: state
+            entity: input_boolean.byd_config
+            state: "on"
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: lock.byd_sealion_7_lock
+        name: Door Locks
+        grid_options:
+          columns: 3
+          rows: 2
+        tap_action:
+          action: toggle
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: button.byd_sealion_7_close_windows
+        name: Windows
+        tap_action:
+          action: toggle
+        grid_options:
+          columns: 3
+          rows: 2
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: switch.byd_sealion_7_a_c_on
+        name: Air Conditioner
+        icon: mdi:air-conditioner
+        grid_options:
+          columns: 3
+          rows: 2
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: button.byd_sealion_7_force_poll
+        icon: mdi:access-point-network
+        grid_options:
+          columns: 3
+          rows: 2
+        tap_action:
+          action: toggle
+        name: Force Update
+      - type: thermostat
+        entity: climate.byd_sealion_7_climate
+        name:
+          type: entity
+        grid_options:
+          columns: 12
+          rows: 5
+      - type: map
+        entities:
+          - entity: device_tracker.byd_sealion_7_location
+        theme_mode: auto
+        default_zoom: 16
+        title: Location
+        grid_options:
+          columns: 12
+          rows: 9
+    column_span: 1
+  - type: grid
+    cards:
+      - type: custom:frigate-card
+        cameras:
+          - camera_entity: camera.garage
+            live_provider: ha
+        grid_options:
+          columns: 11
+          rows: 4
+        dimensions: {}
+        visibility:
+          - condition: state
+            entity: device_tracker.byd_sealion_7_location
+            state: home
+      - type: logbook
+        target:
+          entity_id:
+            - select.byd_sealion_7_driver_seat_ventilation
+            - select.byd_sealion_7_driver_seat_heating
+            - select.byd_sealion_7_passenger_seat_ventilation
+            - select.byd_sealion_7_passenger_seat_heating
+            - binary_sensor.byd_sealion_7_charging
+            - binary_sensor.byd_sealion_7_locked
+            - binary_sensor.byd_sealion_7_windows
+            - switch.byd_sealion_7_a_c_on
+            - switch.byd_sealion_7_steering_wheel_heating
+        grid_options:
+          columns: 12
+          rows: 14
+header:
+  layout: start
+  badges_position: bottom
+  badges_wrap: wrap
+  card:
+    type: markdown
+    content: "# BYD Sealion 7"
+    text_only: true
+cards: []
+badges:
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: binary_sensor.byd_sealion_7_doors
+    name:
+      type: entity
+    show_entity_picture: false
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: binary_sensor.byd_sealion_7_locked
+    name: Doors
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: binary_sensor.byd_sealion_7_windows
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: sensor.byd_sealion_7_odometer
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: sensor.byd_sealion_7_range
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: sensor.byd_sealion_7_cabin_temperature
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: sensor.byd_sealion_7_exterior_temperature
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: update.byd_vehicle_update
+    name: Update available
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: binary_sensor.pixel_9_pro_fold_android_auto
+    name:
+      type: entity
+  - type: entity
+    show_name: true
+    show_state: true
+    show_icon: true
+    entity: sensor.byd_sealion_7_gps_last_updated
+    name: Last Polled
+  - type: entity
+    show_name: false
+    show_state: false
+    show_icon: true
+    entity: input_boolean.byd_config
+    show_entity_picture: true
+    tap_action:
+      action: toggle
+
