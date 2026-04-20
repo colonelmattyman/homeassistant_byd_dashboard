@@ -175,10 +175,10 @@ A hidden config panel is controlled by `input_boolean.byd_config`. Tap the gear 
 ```
 byd-sealion7-ha-dashboard/
 ├── README.md
-├── car.yaml              # Dashboard YAML
-├── automations.yaml      # All automations
+├── car.yaml                      # Dashboard YAML
+├── automations.yaml              # All automations
 ├── configuration_helpers.yaml    # Template sensors, input booleans, input select
-└── images/               # All 55 PNG and GIF overlay files
+└── images/                       # All 55 PNG and GIF overlay files
 ```
 ---
 
