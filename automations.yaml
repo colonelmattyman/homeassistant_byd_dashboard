@@ -1,0 +1,249 @@
+automations:
+	alias: BYD Automate Driver Seat Cooling On
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - switch.byd_sealion_7_a_c_on
+		to:
+		  - "on"
+	conditions:
+	  - condition: state
+		entity_id: input_boolean.byd_driver_seat_cooling
+		state:
+		  - "on"
+	actions:
+	  - action: select.select_option
+		metadata: {}
+		target:
+		  entity_id: select.byd_sealion_7_driver_seat_ventilation
+		data:
+		  option: high
+	mode: single
+
+
+	alias: BYD Automate Driver Seat Heating On
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - switch.byd_sealion_7_a_c_on
+		to:
+		  - "on"
+	conditions:
+	  - condition: state
+		entity_id: input_boolean.byd_driver_seat_heating
+		state:
+		  - "on"
+	actions:
+	  - action: select.select_option
+		metadata: {}
+		target:
+		  entity_id:
+			- select.byd_sealion_7_driver_seat_heating
+		data:
+		  option: high
+	  - action: switch.turn_on
+		metadata: {}
+		target:
+		  entity_id: switch.byd_sealion_7_steering_wheel_heating
+		data: {}
+	mode: single
+
+	alias: BYD Automate Passenger Seat Cooling On
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - switch.byd_sealion_7_a_c_on
+		to:
+		  - "on"
+	conditions:
+	  - condition: state
+		entity_id: input_boolean.byd_passenger_seat_cooling
+		state:
+		  - "on"
+	actions:
+	  - action: select.select_option
+		metadata: {}
+		target:
+		  entity_id:
+			- select.byd_sealion_7_passenger_seat_ventilation
+		data:
+		  option: high
+	mode: single
+
+	alias: BYD Automate Poll on Page Load using Browser_Mod
+	description: >-
+	  This uses a template to poll the car for updates whenever the car dashbaord is
+	  loaded. 
+	triggers:
+	  - event_type: state_changed
+		trigger: event
+	conditions:
+	  - condition: template
+		value_template: |
+		  {{ 'browser_mod' in trigger.event.data.entity_id and
+			 trigger.event.data.new_state.state == '/lovelace/car' }}
+	actions:
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	mode: single
+
+	alias: BYD Cooling On Pressed
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - input_boolean.byd_driver_seat_cooling
+		to:
+		  - "on"
+	conditions: []
+	actions:
+	  - action: input_boolean.turn_off
+		metadata: {}
+		target:
+		  entity_id: input_boolean.byd_driver_seat_heating
+		data: {}
+	mode: single
+
+	alias: BYD Driver Seat Heating Pressed
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - input_boolean.byd_driver_seat_heating
+		to:
+		  - "on"
+	conditions: []
+	actions:
+	  - action: input_boolean.turn_off
+		metadata: {}
+		data: {}
+		target:
+		  entity_id: input_boolean.byd_driver_seat_cooling
+	mode: single
+
+	alias: BYD Force Poll when Pixel 9 Pro connects to car
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - binary_sensor.pixel_9_pro_fold_android_auto
+		to:
+		  - "on"
+	conditions: []
+	actions:
+	  - action: switch.turn_off
+		metadata: {}
+		target:
+		  entity_id: switch.byd_sealion_7_disable_polling
+		data: {}
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	  - delay:
+		  hours: 0
+		  minutes: 0
+		  seconds: 30
+		  milliseconds: 0
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	  - delay:
+		  hours: 0
+		  minutes: 0
+		  seconds: 30
+		  milliseconds: 0
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	mode: single
+
+	alias: BYD Passenger Seat Cooling Pressed
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - input_boolean.byd_passenger_seat_cooling
+		to:
+		  - "on"
+	conditions: []
+	actions:
+	  - action: input_boolean.turn_off
+		metadata: {}
+		data: {}
+		target:
+		  entity_id: input_boolean.byd_passenger_seat_heating
+	mode: single
+
+	alias: BYD Passenger Seat Heating Pressed
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - input_boolean.byd_passenger_seat_heating
+		to:
+		  - "on"
+	conditions: []
+	actions:
+	  - action: input_boolean.turn_off
+		metadata: {}
+		data: {}
+		target:
+		  entity_id:
+			- input_boolean.byd_passenger_seat_cooling
+	mode: single
+
+	alias: Disable Polling
+	description: ""
+	triggers:
+	  - trigger: state
+		entity_id:
+		  - binary_sensor.pixel_9_pro_fold_android_auto
+		to:
+		  - "off"
+	conditions: []
+	actions:
+	  - action: switch.turn_on
+		metadata: {}
+		target:
+		  entity_id: switch.byd_sealion_7_disable_polling
+		data: {}
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	  - delay:
+		  hours: 0
+		  minutes: 0
+		  seconds: 30
+		  milliseconds: 0
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	  - delay:
+		  hours: 0
+		  minutes: 0
+		  seconds: 30
+		  milliseconds: 0
+	  - action: button.press
+		metadata: {}
+		target:
+		  entity_id: button.byd_sealion_7_force_poll
+		data: {}
+	mode: single
+
+
